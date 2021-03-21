@@ -1,0 +1,28 @@
+/********** FAVORITE SONG *************/
+
+How to store favorite song
+
+1. To store favorite song, what we need is the song's ID.
+2. We push the song's ID into an Array. 
+
+Example: let favoriteSongArray = [];
+
+How to display favorite song
+
+1. Loop through the favorite song Array;
+2. Then display the songs
+
+How to identifier favorite song anywher in the music player
+
+1. Loop the the favorite song Array
+2. Check if the song ID is same as the one in the favorite song array
+
+Example : favoriteSongArray.forEach(song => song.id === musicID)
+
+What is musicID?
+musicID is the music that is being matched.
+
+/************* PLAYLIST ***************/
+
+
+/************* MOST PLAYED ***************/

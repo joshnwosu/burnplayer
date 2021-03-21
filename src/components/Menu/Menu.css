@@ -1,0 +1,96 @@
+.menu {
+  width: 250px;
+  max-width: 250px;
+  max-height: 400px;
+  background-color: var(--nav-o-3);
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  color: var(--text);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--box-shadow);
+  overflow-y: auto;
+  z-index: 99999;
+  display: none;
+  border-radius: 10px;
+  border: 1px solid var(--dark);
+}
+
+.menu::-webkit-scrollbar {
+  width: 0;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.menu.show {
+  display: block;
+}
+
+.menu-seperator {
+  height: 1px;
+  border-top: 1px solid var(--dark-o-5);
+  border-bottom: 1px solid var(--black-o-5);
+}
+
+.menu-header {
+  padding: 10px 20px;
+}
+
+.menu-title {
+  font-size: 16px;
+}
+
+.menu-path {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+  color: var(--light-grey);
+}
+
+.menu-list {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+.menu-list:hover {
+  background-color: var(--dark);
+}
+
+.menu-list:hover .menu-icon svg {
+  fill: var(--white);
+}
+
+.menu-list:hover .menu-text {
+  color: var(--white);
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-o-5);
+}
+
+.menu-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}

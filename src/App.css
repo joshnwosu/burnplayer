@@ -1,0 +1,232 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--nav);
+  color: var(--text);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background-color: var(--primary);
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 1fr 90px;
+}
+
+.app.toggle-control {
+  grid-template-rows: 1fr 0;
+}
+
+.app.toggle-control .mini-control {
+  right: 50px;
+}
+
+.app .mini-control {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 50px;
+  right: -100px;
+  background-color: var(--black-o-7);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  z-index: 999999999999;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  /* display: grid; */
+  /* grid-template-columns: 220px 1fr 300px; */
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+/* main > .navbar {
+  width: 220px;
+} */
+
+/* main > .content {
+  flex: 1;
+} */
+
+/* main > .playlist-container {
+  width: 300px;
+} */
+
+/* main > div {
+  border: 1px solid green;
+} */
+
+/* main.toggle-navbar .navbar {
+  background-color: var(--nav);
+}
+
+main.toggle */
+
+/* main.toggle-navbar {
+  grid-template-columns: 50px 1fr 0;
+}
+
+main.toggle-navbar .navbar {
+  background-color: var(--nav);
+}
+
+main.toggle-navbar .navbar .nav-item-header {
+  display: none;
+}
+
+main.toggle-navbar .navbar .nav-item {
+  height: 60px;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--black);
+}
+
+main.toggle-navbar .navbar .nav-item.active-nav-item {
+  background: none;
+}
+
+main.toggle-navbar .navbar .nav-item span {
+  display: none;
+}
+
+main.toggle-navbar .navbar .nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+main.toggle-playlist {
+  grid-template-columns: auto 1fr 300px;
+} */
+
+/* .container {
+  width: 100%;
+  height: calc(100% - 60px);
+  position: absolute;
+  overflow-y: auto;
+  margin-top: 60px;
+ 
+} */
+
+.explore-wrapper,
+.folder-wrapper {
+  width: 100%;
+  height: calc(100% - 60px);
+  position: absolute;
+  overflow-y: auto;
+  margin-top: 60px;
+}
+
+svg.liked {
+  fill: var(--primary) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* context-menu and context-menu-btn */
+
+.context-menu {
+  min-width: 200px;
+  max-width: 250px;
+  max-height: 400px;
+  background-color: var(--nav-o-9);
+  position: fixed;
+  color: var(--text);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--box-shadow);
+  overflow-y: auto;
+  z-index: 999999999;
+  border-radius: 10px;
+  border: 1px solid var(--dark);
+
+  transform: scale(0);
+  transition: transform 0.25s;
+}
+.context-menu::-webkit-scrollbar {
+  width: 0;
+}
+
+.context-menu::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.context-menu-seperator {
+  height: 1px;
+  border-top: 1px solid var(--dark-o-9);
+  border-bottom: 1px solid var(--black-o-9);
+}
+
+.context-menu-list {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.context-menu-list:hover {
+  background-color: var(--dark);
+}
+
+.context-menu-list:hover .context-menu-icon svg {
+  fill: var(--primary-o-8);
+}
+
+.context-menu-list:hover .context-menu-text {
+  color: var(--primary-o-8);
+}
+
+.context-menu-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.context-menu-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--text-o-5);
+}
+
+.context-menu-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}

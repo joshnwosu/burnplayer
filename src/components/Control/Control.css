@@ -1,0 +1,311 @@
+.control-panel {
+  width: 100%;
+  flex: 1;
+  border-top: 1px solid var(--black);
+  position: relative;
+  z-index: 999;
+}
+
+.control-panel svg {
+  fill: var(--light-grey);
+  width: 18px;
+  height: 18px;
+}
+
+.control-panel audio {
+  display: none;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.control-panel .slider {
+  flex-grow: 1;
+  background-color: var(--light-grey);
+  cursor: pointer;
+  position: relative;
+}
+
+.control-panel .slider .bar {
+  background-color: var(--primary);
+  border-radius: inherit;
+  position: absolute;
+  pointer-events: none;
+}
+
+.control-panel .slider .bar .pin {
+  height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  position: absolute;
+  pointer-events: all;
+  box-shadow: var(--pin-shadow);
+}
+
+.player-control {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  grid-gap: 50px;
+}
+
+.player-control .middle-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player-control .progress,
+.player-control .control-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0;
+  /* border: 1px solid red; */
+}
+
+.player-control .control-btn svg {
+  fill: var(--light-grey);
+  width: 18px;
+  height: 18px;
+}
+
+.player-control .control-btn .next svg,
+.player-control .control-btn .previous svg {
+  width: 16px;
+  height: 16px;
+}
+
+.player-control .control-btn .playpause {
+  margin: 0 20px;
+}
+
+.player-control .control-btn .playpause svg {
+  width: 30px;
+  height: 30px;
+}
+
+.repeat span {
+  font-size: 12px;
+  color: var(--dark-grey);
+
+  margin-left: 2px;
+}
+
+.player-control button {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.player-control button:hover svg {
+  fill: var(--primary);
+}
+
+.progress {
+  z-index: 2;
+  width: 100%;
+  /* height: 100%; */
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.progress .current-time,
+.progress .duration-time {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--light-grey);
+}
+
+.progress span {
+  cursor: default;
+}
+
+.progress .slider {
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 2px;
+  height: 3px;
+}
+
+.progress .slider .bar {
+  width: 0;
+  height: 100%;
+}
+
+.progress .slider .bar .pin {
+  right: -8px;
+  top: -7px;
+}
+
+.left-control {
+  display: flex;
+}
+
+.left-control .control-info {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 100px 1fr 50px;
+}
+
+.left-control .control-info .control-photo {
+  display: flex;
+  align-items: center;
+}
+
+.left-control .control-info .control-photo .blur-img,
+.left-control .control-info .control-photo .normal-img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.left-control .control-info .control-photo .blur-img img,
+.left-control .control-info .control-photo .normal-img img {
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.left-control .control-info .control-photo .blur-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.left-control .control-info .control-photo .normal-img {
+  background-color: var(--nav-o-6);
+  backdrop-filter: blur(2px);
+}
+
+.left-control .control-info .control-photo .normal-img img {
+  width: 60px;
+  height: 60px;
+}
+
+.left-control .control-info .control-text {
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.left-control .control-info .control-text h4,
+.left-control .control-info .control-text h5 {
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.left-control .control-info .control-text h4 {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.left-control .control-info .control-text h5 {
+  font-size: 12px;
+  color: var(--dark-grey);
+}
+
+.left-control .control-info .control-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-control .control-info .control-like button {
+  margin: 0;
+}
+
+.left-control .control-info .control-like button svg {
+  fill: var(--light-grey);
+  width: 18px;
+  height: 18px;
+}
+
+.right-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.right-control > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-control .volume {
+  position: relative;
+}
+
+.right-control .volume .volume-btn {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.right-control .volume .volume-btn svg {
+  fill: var(--light-grey);
+  width: 18px;
+  height: 18px;
+}
+
+.right-control .volume .volume-btn.open path {
+  fill: var(--primary);
+}
+
+.right-control .volume .volume-controls {
+  border: 2px solid var(--black);
+  width: 30px;
+  height: 135px;
+  background-color: var(--black-o-5);
+  backdrop-filter: blur(6px);
+  border-radius: 7px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 52px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.right-control .volume .volume-controls.hidden {
+  display: none;
+}
+
+.right-control .volume .volume-controls .slider {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 4px;
+  border-radius: 3px;
+}
+
+.right-control .volume .volume-controls .slider .bar {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.right-control .volume .volume-controls .slider .bar .pin {
+  left: -6px;
+  top: -8px;
+}

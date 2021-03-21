@@ -1,0 +1,36 @@
+:root {
+  --nav: rgba(8, 8, 8, 1);
+  --nav-o-1: rgba(8, 8, 8, 0.1);
+  --nav-o-2: rgba(8, 8, 8, 0.2);
+  --nav-o-3: rgba(8, 8, 8, 0.3);
+  --nav-o-4: rgba(8, 8, 8, 0.4);
+  --nav-o-5: rgba(8, 8, 8, 0.5);
+  --nav-o-6: rgba(8, 8, 8, 0.6);
+  --nav-o-7: rgba(8, 8, 8, 0.7);
+  --nav-o-8: rgba(8, 8, 8, 0.8);
+  --nav-o-9: rgba(8, 8, 8, 0.9);
+
+  --dark: rgb(12, 12, 12);
+  --dark-o-1: rgba(12, 12, 12, 0.1);
+  --dark-o-2: rgba(12, 12, 12, 0.2);
+  --dark-o-3: rgba(12, 12, 12, 0.3);
+  --dark-o-4: rgba(12, 12, 12, 0.4);
+  --dark-o-5: rgba(12, 12, 12, 0.5);
+  --dark-o-6: rgba(12, 12, 12, 0.6);
+  --dark-o-7: rgba(12, 12, 12, 0.7);
+  --dark-o-8: rgba(12, 12, 12, 0.8);
+  --dark-o-9: rgba(12, 12, 12, 0.9);
+
+  --black: rgba(4, 4, 4, 1);
+  --black-o-1: rgba(4, 4, 4, 0.1);
+  --black-o-2: rgba(4, 4, 4, 0.2);
+  --black-o-3: rgba(4, 4, 4, 0.3);
+  --black-o-4: rgba(4, 4, 4, 0.4);
+  --black-o-5: rgba(4, 4, 4, 0.5);
+  --black-o-6: rgba(4, 4, 4, 0.6);
+  --black-o-7: rgba(4, 4, 4, 0.7);
+  --black-o-8: rgba(4, 4, 4, 0.8);
+  --black-o-9: rgba(4, 4, 4, 0.9);
+
+  --box-shadow: 0 19px 38px rgba(0, 0, 0, 0.8), 0 15px 12px rgba(0, 0, 0, 0.8);
+}
