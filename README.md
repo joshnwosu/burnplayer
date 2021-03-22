@@ -1,1 +1,1 @@
-# Pulse Music Player
+# Burn Music Player
