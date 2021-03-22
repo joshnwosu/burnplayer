@@ -1,2 +1,2 @@
 # pulsemusic
-Please swicth to the Master Branch
+Please swtich to the Master Branch
